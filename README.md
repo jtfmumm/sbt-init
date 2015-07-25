@@ -1,6 +1,8 @@
 # sbt-init
 
-This project creates a standard sbt directory structure and creates a build.sbt file based on a template.  If you want to use your own template, fork this project and update build.sbt.template.  Change the curl address in sbt-init.sh to match the raw GitHub address of your new template.
+This project creates a standard sbt directory structure and creates a build.sbt file based on a template.  
+
+If you want to use your own template, fork this project and update build.sbt.template.  Change the curl address in sbt-init.sh to match the raw GitHub address of your new template.
 
 ## Usage
 
