@@ -18,7 +18,7 @@ mkdir src/test/resources
 mkdir src/test/scala
 mkdir src/test/java
 
-curl https://raw.githubusercontent.com/jtfmumm/sbt-init/master/sbt-init.sbt.template > build.sbt
+curl https://raw.githubusercontent.com/jtfmumm/sbt-init/master/sbt-init/build.sbt.template > build.sbt
 
 cat build.sbt | sed s/\!NAME\!/$1/ | tee build.sbt
 cat build.sbt | sed s/\!GITHUBID\!/$2/ | tee build.sbt
