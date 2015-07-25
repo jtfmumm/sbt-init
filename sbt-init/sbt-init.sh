@@ -18,6 +18,8 @@ fi
 mkdir $NAME
 cd $NAME
 
+echo "target/ \n project/ \n.gitignore\n *.iml\n .idea\" > .gitignore
+
 mkdir target
 mkdir project
 mkdir src
