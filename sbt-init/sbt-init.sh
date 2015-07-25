@@ -1,10 +1,22 @@
 #!/bin/bash
 
-if [ $# -eq 0 ]
-  then $1="\!NAME\!"; $2="\!GITHUBID\!"
-else if [ $# -eq 1 ]
-  then $2="\!GITHUBID\!"
+if [ $# -eq 0 ];
+  then 
+    echo "sbt-init PROJECT-NAME GITHUB-ID"
+    echo "You need at least a project/directory name as an argument!"
+    echo "An optional second argument can be used for a GitHub ID"
+    exit 1
+elif [ $# -eq 1 ];
+  then
+    NAME=$1 
+    GITHUBID="\!GITHUBID\!"
+else
+  NAME=$1
+  GITHUBID=$2
 fi
+
+mkdir $NAME
+cd $NAME
 
 mkdir target
 mkdir project
@@ -20,5 +32,5 @@ mkdir src/test/java
 
 curl https://raw.githubusercontent.com/jtfmumm/sbt-init/master/sbt-init/build.sbt.template > build.sbt
 
-cat build.sbt | sed s/\!NAME\!/$1/ | tee build.sbt
-cat build.sbt | sed s/\!GITHUBID\!/$2/ | tee build.sbt
+cat build.sbt | sed s/\!NAME\!/$NAME/ | tee build.sbt
+cat build.sbt | sed s/\!GITHUBID\!/$GITHUBID/ | tee build.sbt
