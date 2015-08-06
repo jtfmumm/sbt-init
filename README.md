@@ -8,6 +8,8 @@ If you want to use your own template, fork this project and update build.sbt.tem
 
 Place sbt-init.sh in your $PATH.
 
+Make the script executable with ``` chmod +x sbt-init.sh ```
+
 Call 
 
 ```bash
